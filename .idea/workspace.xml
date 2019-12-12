@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b40bc281-d220-4fd6-859e-d404a4d94c6a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1UtUiRkIRYszFDnQSEds0GjUL73" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files/AdoptOpenJDK/jdk-8.0.222.10-hotspot" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.bhavanichandra.bisync" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\TheMuler\bisync\src\main\java\com\bhavanichandra\bisync\model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BisyncApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="bisync" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bhavanichandra.bisync.BisyncApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b40bc281-d220-4fd6-859e-d404a4d94c6a" name="Default Changelist" comment="" />
+      <created>1576175511919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576175511919</updated>
+      <workItem from="1576175514642" duration="4800000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="182" key="#Inspections" timestamp="1576179724326">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="182" key="#Inspections/0.0.1920.1050@0.0.1920.1050" timestamp="1576179724326" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1576180742485">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1576180742485" />
+    <state x="782" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1576179328406">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="782" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576179328406" />
+    <state x="756" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1576179330273">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="756" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050@0.0.1920.1050" timestamp="1576179330273" />
+    <state x="557" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576182318755">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="557" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576182318755" />
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576182305974">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576182305974" />
+    <state x="651" y="263" width="617" height="524" key="find.popup" timestamp="1576182423491">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="651" y="263" width="617" height="524" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1576182423491" />
+  </component>
+</project>
