@@ -1,15 +1,19 @@
 package com.bhavanichandra.bisync.controller;
 
 import com.bhavanichandra.bisync.gateway.IBisyncGateway;
+import com.bhavanichandra.bisync.model.Contact;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.Message;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
-import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
+import static org.springframework.http.MediaType.*;
+import static org.springframework.messaging.support.MessageBuilder.withPayload;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
@@ -24,8 +28,16 @@ public class BisyncController {
         this.gateway = gateway;
     }
 
-    @RequestMapping(path = "/trigger", consumes = APPLICATION_XML_VALUE, produces = APPLICATION_JSON_VALUE, method = POST)
-    public Object triggerFromSalesforce(@RequestBody HashMap<String, Object> requestFromSFDC) {
-        return gateway.processMessage(requestFromSFDC);
+    @RequestMapping(path = "/trigger", consumes = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, produces = APPLICATION_JSON_VALUE, method = POST)
+    public Object triggerFromSalesforce(@RequestBody Contact requestFromSFDC) throws JsonProcessingException {
+        System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(requestFromSFDC));
+        Message<Contact> contactMessage = withPayload(requestFromSFDC).build();
+        return gateway.processMessage(contactMessage);
+    }
+
+    @RequestMapping(path = "/slashcommand", method = POST, consumes = APPLICATION_FORM_URLENCODED_VALUE)
+    public Object triggerFromSlack(HashMap<String,String> slackRequest) throws Exception {
+        System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(slackRequest));
+        return slackRequest;
     }
 }

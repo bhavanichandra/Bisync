@@ -1,50 +1,61 @@
 package com.bhavanichandra.bisync.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+
 public class Contact {
-
-    private String FirstName;
-    private String LastName;
-    private String Email;
-    private String Phone;
-    private String Country;
-
-    public String getFirstName() {
-        return FirstName;
-    }
-
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
-    }
-
-    public String getLastName() {
-        return LastName;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
+    @JsonAlias("Email")
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String createdDate;
+    private String lastModifiedDate;
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
-    public String getCountry() {
-        return Country;
+    public String getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCountry(String country) {
-        Country = country;
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(String lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
     }
 }

@@ -1,15 +1,16 @@
 
 package com.bhavanichandra.bisync.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SlackModalMessage {
 
     private String type;
     private CommonModel title;
-    private Submit submit;
+    private CommonModel submit;
     private CommonModel close;
-    private List<Block> blocks = null;
+    private List<Block> blocks = new ArrayList<>();
 
     /**
      * No args constructor for use in serialization
@@ -26,7 +27,7 @@ public class SlackModalMessage {
      * @param title
      * @param close
      */
-    public SlackModalMessage(String type, CommonModel title, Submit submit, CommonModel close, List<Block> blocks) {
+    public SlackModalMessage(String type, CommonModel title, CommonModel submit, CommonModel close, List<Block> blocks) {
         super();
         this.type = type;
         this.title = title;
@@ -51,11 +52,11 @@ public class SlackModalMessage {
         this.title = title;
     }
 
-    public Submit getSubmit() {
+    public CommonModel getSubmit() {
         return submit;
     }
 
-    public void setSubmit(Submit submit) {
+    public void setSubmit(CommonModel submit) {
         this.submit = submit;
     }
 

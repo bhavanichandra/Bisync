@@ -17,7 +17,6 @@ import static org.springframework.integration.dsl.MessageChannels.direct;
 @Configuration
 @ComponentScan(basePackages = "com.bhavanichandra.bisync.*")
 @EnableIntegration
-@EnableAutoConfiguration
 @IntegrationComponentScan(basePackages = "com.bhavanichandra.bisync.*")
 public class BisyncConfig {
 
