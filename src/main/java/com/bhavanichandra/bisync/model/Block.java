@@ -1,11 +1,16 @@
 package com.bhavanichandra.bisync.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY;
+
+@JsonInclude(value = NON_EMPTY)
 public class Block {
 
-    private BlockTypes type;
+    private String type;
     private CommonModel text;
     private Accessory accessory;
     private List<Element> elements = new ArrayList<>();
@@ -18,8 +23,7 @@ public class Block {
     public Block() {
     }
 
-
-    public Block(BlockTypes type, CommonModel text, Accessory accessory, List<Element> elements, List<Field> fields) {
+    public Block(String type, CommonModel text, Accessory accessory, List<Element> elements, List<Field> fields) {
         this.type = type;
         this.text = text;
         this.accessory = accessory;
@@ -27,14 +31,13 @@ public class Block {
         this.fields = fields;
     }
 
-    public BlockTypes getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(BlockTypes type) {
+    public void setType(String type) {
         this.type = type;
     }
-
 
     public List<Field> getFields() {
         return fields;
