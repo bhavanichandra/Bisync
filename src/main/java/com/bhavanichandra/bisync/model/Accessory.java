@@ -4,7 +4,7 @@ package com.bhavanichandra.bisync.model;
 
 public class Accessory {
 
-    private String type;
+    private AccessoryTypes type;
     private String imageUrl;
     private String altText;
 
@@ -21,19 +21,15 @@ public class Accessory {
      * @param imageUrl
      * @param type
      */
-    public Accessory(String type, String imageUrl, String altText) {
+    public Accessory(AccessoryTypes type, String imageUrl, String altText) {
         super();
         this.type = type;
         this.imageUrl = imageUrl;
         this.altText = altText;
     }
 
-    public String getType() {
+    public AccessoryTypes getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getImageUrl() {

@@ -1,5 +1,6 @@
 package com.bhavanichandra.bisync.controller;
 
+import com.bhavanichandra.bisync.domain.Envelope;
 import com.bhavanichandra.bisync.gateway.IBisyncGateway;
 import com.bhavanichandra.bisync.model.Contact;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -28,15 +29,16 @@ public class BisyncController {
         this.gateway = gateway;
     }
 
-    @RequestMapping(path = "/trigger", consumes = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, produces = APPLICATION_JSON_VALUE, method = POST)
-    public Object triggerFromSalesforce(@RequestBody Contact requestFromSFDC) throws JsonProcessingException {
+    @RequestMapping(path = "/trigger", consumes = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, produces = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, method = POST)
+    public Object triggerFromSalesforce(@RequestBody Envelope requestFromSFDC) throws JsonProcessingException {
         System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(requestFromSFDC));
-        Message<Contact> contactMessage = withPayload(requestFromSFDC).build();
-        return gateway.processMessage(contactMessage);
+
+        Message<Envelope> envelopeMessage = withPayload(requestFromSFDC).build();
+        return gateway.processMessage(envelopeMessage);
     }
 
     @RequestMapping(path = "/slashcommand", method = POST, consumes = APPLICATION_FORM_URLENCODED_VALUE)
-    public Object triggerFromSlack(HashMap<String,String> slackRequest) throws Exception {
+    public Object triggerFromSlack(HashMap<String, String> slackRequest) throws Exception {
         System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(slackRequest));
         return slackRequest;
     }

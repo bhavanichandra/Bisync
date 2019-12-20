@@ -5,10 +5,12 @@ import java.util.List;
 
 public class Block {
 
-    private String type;
+    private BlockTypes type;
     private CommonModel text;
     private Accessory accessory;
     private List<Element> elements = new ArrayList<>();
+    private List<Field> fields = new ArrayList<>();
+
 
     /**
      * No args constructor for use in serialization
@@ -16,26 +18,30 @@ public class Block {
     public Block() {
     }
 
-    /**
-     * @param elements
-     * @param text
-     * @param type
-     * @param accessory
-     */
-    public Block(String type, CommonModel text, Accessory accessory, List<Element> elements) {
-        super();
+
+    public Block(BlockTypes type, CommonModel text, Accessory accessory, List<Element> elements, List<Field> fields) {
         this.type = type;
         this.text = text;
         this.accessory = accessory;
         this.elements = elements;
+        this.fields = fields;
     }
 
-    public String getType() {
+    public BlockTypes getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(BlockTypes type) {
         this.type = type;
+    }
+
+
+    public List<Field> getFields() {
+        return fields;
+    }
+
+    public void setFields(List<Field> fields) {
+        this.fields = fields;
     }
 
     public CommonModel getText() {
