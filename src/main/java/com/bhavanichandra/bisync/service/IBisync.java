@@ -6,4 +6,6 @@ import org.springframework.messaging.Message;
 
 public interface IBisync {
     Message<SlackMessage> constructSlackMessage(Message<Envelope> contactMessage) throws Exception;
+
+    Message<?> slackResponse(Message<?> slackResponse) throws Exception;
 }

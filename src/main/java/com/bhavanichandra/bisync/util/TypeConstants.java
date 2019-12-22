@@ -9,5 +9,5 @@ public class TypeConstants {
     public final static String MARKDOWN = "mrkdwn";
     public final static String PLAIN_TEXT = "plain_text";
     public final static String MAIN_NOTIFICATION_MESSAGE = "Hey, You have got a new request: " +
-            "\n *<https://login.salesforce.com | Contact Updated or Created*";
+            "\n *<https://login.salesforce.com | Salesforce Object Updated or Created>*";
 }

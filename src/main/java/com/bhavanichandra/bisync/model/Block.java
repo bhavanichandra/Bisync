@@ -2,19 +2,18 @@ package com.bhavanichandra.bisync.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY;
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
-@JsonInclude(value = NON_EMPTY)
+@JsonInclude(value = NON_NULL)
 public class Block {
 
     private String type;
     private CommonModel text;
     private Accessory accessory;
-    private List<Element> elements = new ArrayList<>();
-    private List<Field> fields = new ArrayList<>();
+    private List<Element> elements;
+    private List<Field> fields;
 
 
     /**

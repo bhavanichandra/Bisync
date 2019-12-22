@@ -1,7 +1,11 @@
 
 package com.bhavanichandra.bisync.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+@JsonInclude(value = NON_NULL)
 public class CommonModel {
 
     private String type;
