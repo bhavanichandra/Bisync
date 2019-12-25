@@ -13,8 +13,7 @@ public class SObject {
     private String lastName;
     @JacksonXmlProperty(localName = "Email")
     private String email;
-    @JacksonXmlProperty(localName = "Company")
-    private String company;
+
 
     public String getType() {
         return type;
@@ -56,11 +55,4 @@ public class SObject {
         this.email = email;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
 }

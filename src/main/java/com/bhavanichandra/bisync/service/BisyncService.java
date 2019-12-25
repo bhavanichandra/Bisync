@@ -1,7 +1,10 @@
 package com.bhavanichandra.bisync.service;
 
 import com.bhavanichandra.bisync.domain.*;
-import com.bhavanichandra.bisync.model.*;
+import com.bhavanichandra.bisync.model.Block;
+import com.bhavanichandra.bisync.model.CommonModel;
+import com.bhavanichandra.bisync.model.Field;
+import com.bhavanichandra.bisync.model.SlackMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,7 +14,9 @@ import org.springframework.messaging.Message;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.bhavanichandra.bisync.model.BlockTypes.SECTION;
@@ -72,12 +77,13 @@ public class BisyncService implements IBisync {
         slackMessage.setBlocks(blocks);
         log.info("Slack Message: " + objectMapper.writerWithDefaultPrettyPrinter()
                 .writeValueAsString(slackMessage));
-        return withPayload(slackMessage).build();
+        return withPayload(slackMessage).setHeader("Authorization", "Bearer " + token).setHeader("Content-Type", "application/json").build();
     }
 
     @Override
     public Message<?> slackResponse(Message<?> slackResponse) throws Exception {
-        log.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(slackResponse));
-        return withPayload(new SlackModalMessage()).build();
+        log.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(slackResponse.getPayload()));
+
+        return withPayload(slackResponse.getPayload()).build();
     }
 }
