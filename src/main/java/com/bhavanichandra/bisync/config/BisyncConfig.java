@@ -11,17 +11,12 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.integration.dsl.IntegrationFlow;
-import org.springframework.integration.http.dsl.Http;
-import org.springframework.integration.http.outbound.HttpRequestExecutingMessageHandler;
 import org.springframework.messaging.MessageChannel;
-import org.springframework.messaging.MessageHandler;
 
 import java.net.URISyntaxException;
-import java.util.Collections;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.springframework.http.HttpMethod.POST;
 import static org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
@@ -52,17 +47,6 @@ public class BisyncConfig {
         converter.setSupportedMediaTypes(asList(APPLICATION_JSON, APPLICATION_FORM_URLENCODED));
         return converter;
     }
-
-
-//    @Bean
-//    public MessageHandler httpGateway() {
-//        HttpRequestExecutingMessageHandler httpHandler = new HttpRequestExecutingMessageHandler("https://enwbr1vviftg.x.pipedream.net/");
-//        httpHandler.setExpectedResponseType(Map.class);
-//        httpHandler.setMessageConverters(singletonList(httpMessageConverter()));
-//        httpHandler.setHttpMethod(POST);
-//        return httpHandler;
-//    }
-
 
     @Bean("bisync.request.channel")
     public MessageChannel inputMessageChannel() {

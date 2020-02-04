@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/config/BisyncConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/config/BisyncConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/controller/BisyncController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/controller/BisyncController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/domain/SObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/domain/SObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/service/BisyncService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/service/BisyncService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bhavanichandra/bisync/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="BisyncApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -81,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577288106348</updated>
       <workItem from="1577288109681" duration="3956000" />
+      <workItem from="1580843702807" duration="907000" />
     </task>
     <servers />
   </component>

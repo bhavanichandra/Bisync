@@ -2,7 +2,6 @@ package com.bhavanichandra.bisync.controller;
 
 import com.bhavanichandra.bisync.domain.Envelope;
 import com.bhavanichandra.bisync.gateway.IBisyncGateway;
-import com.bhavanichandra.bisync.model.Contact;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class BisyncController {
         this.gateway = gateway;
     }
 
-    @RequestMapping(path = "/trigger", consumes = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE,TEXT_XML_VALUE}, produces = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, method = POST)
+    @RequestMapping(path = "/trigger", consumes = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE, TEXT_XML_VALUE}, produces = {APPLICATION_XML_VALUE, APPLICATION_JSON_VALUE}, method = POST)
     public Object triggerFromSalesforce(@RequestBody Envelope requestFromSFDC) throws JsonProcessingException {
         System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(requestFromSFDC));
 
